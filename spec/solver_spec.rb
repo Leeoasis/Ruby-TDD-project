@@ -1,4 +1,4 @@
-require_relative 'solver'
+require_relative '../solver'
 
 RSpec.describe Solver do
   let(:solver) { Solver.new }
@@ -30,7 +30,7 @@ RSpec.describe Solver do
       expect(solver.fizzbuzz(9)).to eq('fizz')
       expect(solver.fizzbuzz(12)).to eq('fizz')
     end
-    
+
     it 'returns "buzz" for numbers divisible by 5' do
       expect(solver.fizzbuzz(5)).to eq('buzz')
       expect(solver.fizzbuzz(10)).to eq('buzz')
