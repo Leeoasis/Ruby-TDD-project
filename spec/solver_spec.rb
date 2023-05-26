@@ -30,3 +30,23 @@ RSpec.describe Solver do
       expect(solver.fizzbuzz(9)).to eq('fizz')
       expect(solver.fizzbuzz(12)).to eq('fizz')
     end
+    
+    it 'returns "buzz" for numbers divisible by 5' do
+      expect(solver.fizzbuzz(5)).to eq('buzz')
+      expect(solver.fizzbuzz(10)).to eq('buzz')
+      expect(solver.fizzbuzz(20)).to eq('buzz')
+    end
+
+    it 'returns "fizzbuzz" for numbers divisible by both 3 and 5' do
+      expect(solver.fizzbuzz(15)).to eq('fizzbuzz')
+      expect(solver.fizzbuzz(30)).to eq('fizzbuzz')
+      expect(solver.fizzbuzz(45)).to eq('fizzbuzz')
+    end
+
+    it 'returns the number as a string for other cases' do
+      expect(solver.fizzbuzz(7)).to eq('7')
+      expect(solver.fizzbuzz(13)).to eq('13')
+      expect(solver.fizzbuzz(22)).to eq('22')
+    end
+  end
+end
